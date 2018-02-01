@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Создание объявления</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="wrapper">
+			<ul class="clearfix">
+				<li><a href="">Ищу питомца</a></li>
+				<li><a href="ad.html" class="active">Дать объявление</a></li>
+				<li><a href="lost.html" data-quantity="22" class="missing notice">Пропавшие питомцы</a></li>
+				<li><a href="" data-quantity="54" class="found notice">Найденные питомцы</a></li>
+				<li><a href="">Отблагодарить разработчика</a></li>
+				<li><a href="">Мой профиль</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper ad clearfix">
+		<div class="issue">
+			<div class="photo">
+				<img src="img/without-photo.jpg">
+			</div>
+			<form method="post">
+				<input type="file" name="photo" id="file" hidden>
+				<label for="file">Загрузить фото</label>
+				<textarea placeholder="Теги: через запятую"></textarea>
+				<input type="submit" hidden>
+			</form>
+		</div>
+		<div class="details">
+			<h1>Создание объявления</h1>
+			<form method="post" class="clearfix">
+				<div class="half">
+					<span>Что случилось?</span>
+					<input type="radio" name="happened" id="lost" hidden checked>
+					<label for="lost" class="button">Я потерял</label>
+					<input type="radio" name="happened" id="found" hidden>
+					<label for="found" class="button">Я нашел</label>
+				</div>
+				<div class="half">
+					<span>Кого?</span>
+					<input type="radio" name="who" id="cat" hidden>
+					<label for="cat" class="button">Кота</label>
+					<input type="radio" name="who" id="dog" hidden checked>
+					<label for="dog" class="button">Собаку</label>
+				</div>
+				<hr>
+				<label for="text">Текст объявления:</label>
+				<textarea placeholder="Пример: «Пропала овчарка в районе вульки. На ней красный ошейник с надписью. Особые приметы: белое пятнышко на ухе. Отзывается на кличку “Рекс”. Если найдете, позвоните пожалуйста на телефон. Спасибо.»" id="text"></textarea>
+				<hr>
+				<div class="half">
+					<label for="breed">Порода:</label>
+					<input type="text" id="breed" name="breed" placeholder="Пример: Овчарка">
+					<label for="gender">Пол:</label>
+					<select type="text" id="gender" name="gender">
+						<option>Кобель</option>
+						<option>Сука (что, коты тоже?)</option>
+					</select>
+					<div>
+						<span>С ошейником:</span>
+						<input type="radio" id="with-collar" name="collar" hidden checked>
+						<label for="with-collar">Да</label>
+						<input type="radio" id="without-collar" name="collar" hidden>
+						<label for="without-collar">Нет</label>
+					</div>
+					<div>
+						<span>С поводком:</span>
+						<input type="radio" id="with-lead" name="lead" hidden checked>
+						<label for="with-lead">Да</label>
+						<input type="radio" id="without-lead" name="lead" hidden>
+						<label for="without-lead">Нет</label>
+					</div>
+				</div>
+				<div class="half">
+					<label for="color">Цвет:</label>
+					<input type="text" id="color" name="color" placeholder="Пример: Черный">
+					<label for="date">Дата пропажи:</label>
+					<input type="date" id="date" name="date" value="Пн, 10 апр 2017">
+				</div>
+				<hr>
+				<div class="half">
+					<label for="name">Ваше имя:</label>
+					<input type="text" id="name" name="name" placeholder="Пример: Артур">
+					<input type="checkbox" name="account" id="account" hidden>
+					<label for="account">Создать аккаунт</label>
+				</div>
+				<div class="half">
+					<label for="tel">Телефон:</label>
+					<input type="tel" id="tel" name="tel" placeholder="Пример: +375 (33) 123-45-67">
+				</div>
+				<hr>
+				<input type="submit" value="Подтвердить">
+			</form>
+		</div>
+	</main>
+</body>
+</html>

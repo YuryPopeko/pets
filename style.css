@@ -68,10 +68,6 @@ nav a.active {
 	box-shadow: inset 0px -3px 15px 0px rgba(0,0,0,.1);
 }
 
-nav a:hover {
-	box-shadow: inset 0px -3px 15px 0px rgba(0,0,0,.1);
-}
-
 nav ul li:first-child a {
 	font-family: dinround black;
 	font-size: 18px;
@@ -124,7 +120,7 @@ nav ul li:last-child a {
 	border-radius: 3px;
 }
 
-nav a.quantity::after {
+nav a.notice::after {
 	content: attr(data-quantity);
 	margin-left: 9px;
 	padding-top: 7px;
@@ -145,6 +141,9 @@ nav ul li:last-child {
 
 main {
 	display: block;
+}
+
+main.lost {
 	background-color: #fff;
 	margin-top: 28px;
 	margin-bottom: 30px;
@@ -161,6 +160,9 @@ h1 {
 	line-height: 60px;
 	color: #4a4a4a;
 	margin: 0;
+}
+
+.lost h1 {
 	float: left;
 }
 
@@ -221,10 +223,13 @@ h1 {
 	position: relative;
 }
 
+h2 {
+	margin: 0;
+}
+
 .lost .item h2 {
 	font-size: 20px;
 	line-height: 21px;
-	margin: 0;
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
@@ -297,4 +302,278 @@ h1 {
 	color: #fff;
 	background-color: #00bbd3;
 	border: 1px solid #00bbd3;
+}
+
+.ad h1 {
+	color: #909090;
+}
+
+.ad .issue {
+	width: 240px;
+	float: left;
+	margin-top: 31px;
+	margin-right: 30px;
+}
+
+.ad .issue .photo {
+	width: 240px;
+	height: 240px;
+	border-radius: 3px;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	background-color: #fff;
+	position: relative;
+}
+
+.ad .issue label[for=file] {
+	display: block;
+	width: 163px;
+	height: 48px;
+	margin: 0 auto;
+	outline: none;
+	transform: translateY(-30px);
+	background-color: #00bbd3;
+	border-radius: 24px;
+	padding-left: 31px;
+	padding-right: 31px;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 48px;
+	color: #fff;
+	white-space: nowrap;
+	transition: .2s ease-in-out;
+}
+
+.ad .issue label[for=file]:hover {
+	background-color: #28909E;
+}
+
+.ad .issue input[type=file]::-webkit-file-upload-button {
+ 	visibility: hidden;
+}
+
+.ad .issue input[type=file]::before {
+	content: 'Загрузить фото';
+	display: inline-block;
+	background-color: #00bbd3;
+	border-radius: 24px;
+	padding-left: 31px;
+	padding-right: 31px;
+	-webkit-user-select: none;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 48px;
+	color: #fff;
+}
+
+.ad textarea {
+	padding: 16px;
+	border: 1px solid #c8c8d0;
+	resize: none;
+	outline: none;
+	font-family: roboto light;
+	font-size: 	14px;
+	line-height: 21px;
+}
+
+.ad .issue textarea {
+	width: 100%;
+	height: 140px;
+	transform: translateY(2px);
+}
+
+.ad .details {
+	width: 900px;
+	float: right;
+	padding-top: 30px;
+	padding-right: 25px;
+	padding-bottom: 50px;
+	padding-left: 55px;
+	background-color: #f1f3f7;
+}
+
+.ad .details form {
+	width: 100%;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-right: 45px;
+	padding-bottom: 40px;
+	padding-left: 45px;
+	background-color: #fff;
+}
+
+.ad .details .half {
+	max-width: 330px;
+	float: left;
+	padding-bottom: 40px;
+}
+
+.ad .details .half + .half {
+	float: right;
+}
+
+.ad .details span,
+.ad .details label {
+	font-size: 16px;
+	line-height: 60px;
+	font-weight: bold;
+}
+
+.ad .details label.button {
+	display: block;
+	width: 261px;
+	border-radius: 2px;
+	background-color: #feac00;
+	text-align: center;
+	font-size: 12px;
+	line-height: 48px;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
+	transform: translateY(-5px);
+	transition: background-color .2s ease-in-out;
+}
+
+.ad .details .button ~ .button {
+	margin-top: 12px;
+}
+
+.ad .details input:checked + .button {
+	line-height: 46px;
+	border: 1px solid #dd7811;
+	background-color: #fb8e00;
+}
+
+.ad .details hr {
+	clear: both;
+	width: 820px;
+    transform: translateX(-45px);
+    border: 0;
+    margin: 0;
+    height: 1px;
+    background-color: #dedede;
+}
+
+.ad .details textarea {
+	width: 100%;
+	height: 200px;
+	margin-bottom: 40px;
+}
+
+.ad .details input:not([type=submit]),
+.ad .details select {
+	width: 330px;
+	height: 48px;
+	border: 1px solid #c8c8d0;
+	outline: none;
+	font-size: 14px;
+	line-height: 21px;
+	padding-top: 14px;
+	padding-right: 19px;
+	padding-bottom: 15px;
+	padding-left: 19px;
+	color: #8d8d94;
+	transform: translateY(-5px);
+}
+
+.ad label[for=gender]::after {
+	content: '\25BC';
+	color: #9e9e9d;
+	font-size: 10px;
+	line-height: 46px;
+	display: inline-block;
+	width: 46px;
+	height: 45px;
+	text-align: center;
+	background-color: #fff;
+	transform: translate(250px, 47px);
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.ad .details .half div {
+	display: inline-block;
+}
+
+.ad .details .half div + div {
+	margin-left: 40px;
+}
+
+.ad .details .half div span {
+	display: block;
+}
+
+.ad .details .half div label {
+	display: block;
+	width: 59px;
+	float: left;
+	text-align: center;
+	border: 1px solid #c8c8d0;
+	line-height: 46px;
+	cursor: pointer;
+	transition: .2s ease-in-out;
+}
+
+.ad .details .half div label ~ label {
+	margin-left: -1px;
+}
+
+.ad .details .half div input:checked + label {
+	background-color: #00bbd3;
+	color: #fff;
+}
+
+.ad .details label[for=account] {
+	display: block;
+	margin-top: 33px;
+	font-size: 14px;
+	line-height: 21px;
+	color: #8d8d94;
+	position: relative;
+	cursor: pointer;
+}
+
+.ad .details label[for=account]::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	background-color: #00bbd3;
+	transform: translateY(4px);
+}
+
+.ad .details input[type=checkbox] + label::after {
+	content: '✓';
+	color: #fff;
+	position: absolute;
+    left: 5px;
+    top: 3px;
+    transform: scale(0);
+    transition: transform .2s ease-in-out;
+}
+
+.ad .details input[type=checkbox]:checked + label::after {
+	transform: scale(1);
+}
+
+.ad .details input[type=submit] {
+	width: 261px;
+	margin-top: 30px;
+	border-radius: 2px;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #00bbd3;
+	border: none;
+	font-size: 12px;
+	line-height: 48px;
+	cursor: pointer;
+	transition: .2s ease-in-out;
+}
+
+.ad .details input[type=submit]:hover {
+	background-color: #28909E;
 }
