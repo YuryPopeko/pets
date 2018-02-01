@@ -223,13 +223,12 @@ h1 {
 	position: relative;
 }
 
-h2 {
-	margin: 0;
-}
-
-.lost .item h2 {
+.lost .item div a {
+	display: block;
+	color: #000;
 	font-size: 20px;
 	line-height: 21px;
+	font-weight: bold;
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
